@@ -4,16 +4,28 @@ import PrijavaView from '../views/PrijavaView.vue'
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'prijava',
     component: PrijavaView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/pocetna',
+    name: 'Pocetna',
+    component: () => import('../views/PocetnaView.vue')
+  },
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: () => import('../views/AdminView.vue')
+  },
+  {
+    path: '/paketi',
+    name: 'Paketi',
+    component: () => import('../views/PaketiView.vue')
+  },
+  {
+    path: '/obavestenja',
+    name: 'Obavestenja',
+    component: () => import('../views/ObavestenjaView.vue')
   }
 ]
 

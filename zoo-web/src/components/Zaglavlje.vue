@@ -15,7 +15,7 @@
           </a>
         </router-link>
         <router-link style="text-decoration: none; color: inherit; align-self: center" to="/">
-          <a class="nav-link" href="#" style="font-weight: normal; padding-right:10px; align-self: center">Odjavi se</a>
+          <a class="nav-link" href="#" style="font-weight: normal; padding-right:10px; align-self: center" @click="odjavise()">Odjavi se</a>
         </router-link>
       </div>
     </nav>
@@ -26,6 +26,7 @@
 #Zag {
   background-color: #3A3A3A;
   color: white;
+  padding: 0;
 }
 
 .naziv{
@@ -57,6 +58,12 @@
 
 <script>
   export default {
-    name: 'Zaglavlje'
+    name: 'Zaglavlje',
+    methods:{
+      odjavise(){
+        localStorage.clear();
+        this.$router.push('/');
+      }
+    }
   };
 </script>

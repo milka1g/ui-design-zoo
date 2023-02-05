@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <PrijavaZaglavlje></PrijavaZaglavlje>
     <router-view/>
   </div>
 </template>
