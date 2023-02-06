@@ -7,7 +7,7 @@ let obavestenja = [
         tip: 'Odrasli',
         kolicina: 2,
         cena: 1000,
-        status: 'cekanje'
+        status: 'Na cekanju'
     },
     {
         id:1,
@@ -17,7 +17,7 @@ let obavestenja = [
         tip: 'hg6f536hgf',
         kolicina: 20,
         cena: 10000,
-        status: 'odobreno'
+        status: 'Na cekanju'
     },
     {
         id:2,
@@ -27,7 +27,7 @@ let obavestenja = [
         tip: 'Deca',
         kolicina: 5,
         cena: 6000,
-        status: 'odobreno'
+        status: 'Odobreno'
     },
     {
         id:3,
@@ -37,7 +37,7 @@ let obavestenja = [
         tip: 'Deca',
         kolicina: 2,
         cena: 1000,
-        status: 'odobreno'
+        status: 'Odobreno'
     },
     {
         id:4,
@@ -47,7 +47,7 @@ let obavestenja = [
         tip: 'Deca',
         kolicina: 2,
         cena: 1000,
-        status: 'odobreno'
+        status: 'Odobreno'
     },
     {
         id:5,
@@ -57,7 +57,7 @@ let obavestenja = [
         tip: 'Deca',
         kolicina: 2,
         cena: 1000,
-        status: 'odobreno'
+        status: 'Odobreno'
     },
 
 ]
