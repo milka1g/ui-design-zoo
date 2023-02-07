@@ -2,8 +2,8 @@
     <nav id="meni" class="navbar navbar-expand-lg">
       <div class="collapse navbar-collapse" id="navbarNav">
           <div class="navbar-nav">
-            <router-link id="razmak" style="font-weight: normal; text-decoration: none; color: inherit;" to="paketi"><a id="belo" class="nav-item nav-link" href="#">Paketi</a></router-link> <div style="align-self: center">|</div>
             <router-link id="razmak" style="font-weight: normal; text-decoration: none; color: inherit;" to="pocetna"><a id="belo" class="nav-item nav-link" href="#">Pocetna</a></router-link> <div style="align-self: center">|</div>
+            <router-link id="razmak" style="font-weight: normal; text-decoration: none; color: inherit;" to="paketi"><a id="belo" class="nav-item nav-link" href="#">Paketi</a></router-link> <div style="align-self: center">|</div>
             <router-link id="razmak" style="font-weight: normal; text-decoration: none; color: inherit;" to="obavestenja"><a id="belo" class="nav-item nav-link" href="#">Obavestenja</a></router-link> <div style="align-self: center">|</div>
             <router-link id="razmak" style="font-weight: normal; text-decoration: none; color: inherit;" to="desavanja"><a id="belo" class="nav-item nav-link" href="#">Desavanja</a></router-link> <div style="align-self: center">|</div>
             <router-link id="razmak" style="font-weight: normal; text-decoration: none; color: inherit;" to="zivotinje"><a id="belo" class="nav-item nav-link" href="#">Zivotinje</a></router-link> <div style="align-self: center">|</div>
@@ -30,6 +30,10 @@
 #razmak{
   padding-left: 12px;
   padding-right: 12px;
+}
+
+.router-link-exact-active a{
+  color: #E0CA3C!important;
 }
 
 #navbarNav{

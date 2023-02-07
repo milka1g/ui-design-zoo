@@ -33,7 +33,7 @@
  justify-content: center;
  align-items: center;
   text-align: center;
-  min-height: 89.9vh;
+  min-height: 91.8vh;
 }
 
 #levo{

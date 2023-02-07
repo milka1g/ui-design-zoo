@@ -31,6 +31,21 @@ const routes = [
     path: '/desavanja',
     name: 'Desavanja',
     component: () => import('../views/DesavanjaView.vue')
+  },
+  {
+    path: '/zivotinje',
+    name: 'Zivotinje',
+    component: () => import('../views/ZivotinjeView.vue')
+  },
+  {
+    path: '/kontakt',
+    name: 'Kontakt',
+    component: () => import('../views/KontaktView.vue')
+  },
+  {
+    path: '/profil',
+    name: 'Profil',
+    component: () => import('../views/ProfilView.vue')
   }
 ]
 
