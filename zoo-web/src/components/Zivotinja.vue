@@ -8,7 +8,7 @@
                 <img :src="''+z.slika" alt="" style="height:100px; width:150px; border-radius: 8%;">
             </div>
             <div class="col-sm-3 dz align-items-end">
-                <button type="button" class="btn" style="background-color:#E0CA3C">Opsirnije...</button>
+                <button type="button" @click="detaljnije()" class="btn" style="background-color:#E0CA3C">Opsirnije...</button>
             </div>
             </div>
             <hr>
@@ -21,6 +21,10 @@
     background-color: #A799B7;
     height: 20%;
     padding: 10px 10px;
+}
+
+.btn {
+    text-transform: unset !important;
 }
 
 .woo{
@@ -47,7 +51,10 @@ export default {
     name:'Zivotinja',
     props:['z'],
     methods:{
-
+        detaljnije(id){
+            this.$router.push('zivotinja/'+this.z.id)
+            // alert('zivotinja/'+this.z.id)
+        }
     }
 }
 </script>
