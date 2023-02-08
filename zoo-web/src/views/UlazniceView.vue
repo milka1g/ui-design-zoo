@@ -1,15 +1,12 @@
 <template>
-    <div class="profil">
+    <div class="ulaznice">
         <Zaglavlje></Zaglavlje>
         <Meni></Meni>
     </div>
 </template>
 
 <style>
-.profil{
-    background-color: #A799B7;
-    min-height: 95.6vh;
-}
+
 </style>
 
 <script>
@@ -17,7 +14,7 @@ import Zaglavlje from '../components/Zaglavlje.vue'
 import Meni from '../components/Meni.vue'
 
 export default {
-    name:'Profil',
+    name:'Ulaznice',
     components:{
         Zaglavlje,
         Meni

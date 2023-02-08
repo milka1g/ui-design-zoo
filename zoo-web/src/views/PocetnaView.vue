@@ -27,7 +27,7 @@
                         <div class="card-body">
                             <h3 class="card-title">Pogledajte sve zivotinje koje mozete videti uzivo!</h3>
                             <br>
-                            <a href="#" class="btn" style="background-color:#93B7BE">Pogledaj</a>
+                            <router-link style="text-decoration: none; color: inherit; align-self: center" to="/zivotinje"><a href="#" class="btn" style="background-color:#93B7BE">Pogledaj</a></router-link>
                         </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                         <div class="card-body">
                             <h3 class="card-title">Zanimljiva desavanja svaki dan u nasem zooloskom vrtu!</h3>
                             <br>
-                            <a href="#" class="btn" style="background-color:#93B7BE">Proveri</a>
+                            <router-link style="text-decoration: none; color: inherit; align-self: center" to="/desavanja"><a href="#" class="btn" style="background-color:#93B7BE">Proveri</a></router-link>
                         </div>
                         </div>
                     </div>
@@ -48,7 +48,8 @@
                             </div>
                             <br>
                             <div>
-                            <a href="#" class="btn" style="background-color:#93B7BE">Kupi</a>
+                                
+                                <router-link style="text-decoration: none; color: inherit; align-self: center" to="/ulaznice"><a href="#" class="btn" style="background-color:#93B7BE">Kupi</a></router-link>
                             </div>
                         </div>
                         </div>

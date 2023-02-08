@@ -10,7 +10,7 @@
             <router-link id="razmak" style="font-weight: normal; text-decoration: none; color: inherit;" to="/kontakt"><a id="belo" class="nav-item nav-link" href="#">Kontakt</a></router-link>
           </div>
           <div style="padding-right:5px">
-            <button type="button" class="btn" style="background-color:#E0CA3C">Ulaznice</button>
+            <router-link id="razmak" style="font-weight: normal; text-decoration: none;" to="/ulaznice"><a class="btn" style="background-color:#E0CA3C">Ulaznice</a></router-link>
           </div>
       </div>
     </nav>
@@ -33,7 +33,7 @@
 }
 
 .router-link-exact-active a{
-  color: #E0CA3C!important;
+  color: #A799B7 !important;
 }
 
 #navbarNav{
