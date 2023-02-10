@@ -13,11 +13,6 @@ const routes = [
     component: () => import('../views/PocetnaView.vue')
   },
   {
-    path: '/admin',
-    name: 'Admin',
-    component: () => import('../views/AdminView.vue')
-  },
-  {
     path: '/paketi',
     name: 'Paketi',
     component: () => import('../views/PaketiView.vue')
@@ -56,7 +51,22 @@ const routes = [
     path: '/ulaznice',
     name: 'Ulaznice',
     component: () => import('../views/UlazniceView.vue')
-  }
+  },
+  {
+    path: '/adminpocetna',
+    name: 'AdminPocetna',
+    component: () => import('../views/AdminView.vue')
+  },
+  {
+    path: '/dodajzivotinju',
+    name: 'DodajZivotinju',
+    component: () => import('../views/DodajZivotinjuView.vue')
+  },
+  {
+    path: '/zahtevi',
+    name: 'ZahteviView',
+    component: () => import('../views/ZahteviView.vue')
+  } 
 ]
 
 const router = createRouter({

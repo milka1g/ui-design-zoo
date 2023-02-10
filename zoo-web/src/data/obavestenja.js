@@ -7,7 +7,7 @@ let obavestenja = [
         tip: 'Odrasli',
         kolicina: 2,
         cena: 1000,
-        status: 'Na cekanju'
+        status: 'Odobreno'
     },
     {
         id:1,
@@ -17,7 +17,7 @@ let obavestenja = [
         tip: 'hg6f536hgf',
         kolicina: 20,
         cena: 10000,
-        status: 'Na cekanju'
+        status: 'Odobreno'
     },
     {
         id:2,
@@ -38,27 +38,7 @@ let obavestenja = [
         kolicina: 2,
         cena: 1000,
         status: 'Odobreno'
-    },
-    {
-        id:4,
-        naslov:'Kupovina 03.06.2022.',
-        sifra: 'khjh23k',
-        vrsta: 'Pojedinacna',
-        tip: 'Deca',
-        kolicina: 2,
-        cena: 1000,
-        status: 'Odobreno'
-    },
-    {
-        id:5,
-        naslov:'Kupovina 01.06.2022.',
-        sifra: 'sdakjk5jh23k',
-        vrsta: 'Pojedinacna',
-        tip: 'Deca',
-        kolicina: 2,
-        cena: 1000,
-        status: 'Odobreno'
-    },
+    }
 
 ]
 

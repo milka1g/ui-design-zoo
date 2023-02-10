@@ -51,7 +51,8 @@ export default {
   data(){
     return{
       korisnicko_ime: '',
-      lozinka: ''
+      lozinka: '',
+      korisnici:[]
     }
   },
   components:{
@@ -59,7 +60,12 @@ export default {
   },
   methods:{
     prijava(){
-      let korisnik = korisnici.find(kor=> kor.kor_ime==this.korisnicko_ime && kor.lozinka==this.lozinka);
+      if(localStorage.getItem('korisnici') != null)
+        this.korisnici = JSON.parse(localStorage.getItem('korisnici'));
+       else 
+          this.korisnici = korisnici;
+
+      let korisnik = this.korisnici.find(kor=> kor.kor_ime==this.korisnicko_ime && kor.lozinka==this.lozinka);
       if(korisnik==null){
         alert("Neispravno korisnicko ime i/ili lozinka");
         return;
@@ -67,18 +73,20 @@ export default {
       localStorage.setItem('korisnik', JSON.stringify(korisnik))
       if(korisnik.tip==1){
         //admin
-        this.$router.push('admin')
+        this.$router.push('adminpocetna')
       } else {
         this.$router.push('pocetna')
       }
     }
   },
   mounted(){
+        if(localStorage.getItem('korisnici') == null)
+          localStorage.setItem('korisnici', JSON.stringify(korisnici));
         if(localStorage.getItem('korisnik')!=null){
             let korisnik = JSON.parse(localStorage.getItem('korisnik'));
             if(korisnik.tip==1){
             //admin
-            this.$router.push('admin')
+            this.$router.push('adminpocetna')
             } else {
               this.$router.push('pocetna')
             }

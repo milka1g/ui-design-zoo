@@ -1,8 +1,8 @@
 <template>
-    <div class="heder">
+    <div class="adminheder">
     <nav id="Zag" class="navbar">
       <div class="odjava">
-      <router-link to="pocetna">
+      <router-link to="/adminpocetna">
       <a class="nav-link" href="#">
         <img class="logo" src="../../public/img/panda.png" alt="">
       </a>
@@ -60,7 +60,7 @@
 
 <script>
   export default {
-    name: 'Zaglavlje',
+    name: 'AdminZaglavlje',
     methods:{
       odjavise(){
         localStorage.removeItem('korisnik');

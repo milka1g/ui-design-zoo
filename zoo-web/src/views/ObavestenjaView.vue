@@ -39,8 +39,27 @@ export default {
     },
     data(){
         return{
-            obavestenja:obavestenja
+            obavestenja:[]
+        }
+    },
+    mounted(){
+        if(localStorage.getItem('obavest') == null){
+            localStorage.setItem('obavest', JSON.stringify(obavestenja));
+            this.obavestenja = obavestenja;
+        }
+        else{
+            this.obavestenja = JSON.parse(localStorage.getItem('obavest'))
+        }
+        function compare( a, b ) {
+            if ( a.status < b.status ){
+                return -1;
+            }
+            if ( a.status > b.status ){
+                return 1;
+            }
+            return 0;
+            }
+        this.obavestenja = this.obavestenja.sort(compare);
         }
     }
-}
 </script>

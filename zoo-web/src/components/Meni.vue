@@ -10,7 +10,7 @@
             <router-link id="razmak" style="font-weight: normal; text-decoration: none; color: inherit;" to="/kontakt"><a id="belo" class="nav-item nav-link" href="#">Kontakt</a></router-link>
           </div>
           <div style="padding-right:5px">
-            <router-link id="razmak" style="font-weight: normal; text-decoration: none;" to="/ulaznice"><a class="btn" style="background-color:#E0CA3C">Ulaznice</a></router-link>
+            <router-link id="razmak" style="font-weight: normal; text-decoration: none;" to="/ulaznice"><a class="btn spec" style="background-color:#E0CA3C">Ulaznice</a></router-link>
           </div>
       </div>
     </nav>
@@ -32,8 +32,12 @@
   padding-right: 12px;
 }
 
+.spec{
+  color: #252525  !important;
+}
+
 .router-link-exact-active a{
-  color: #A799B7 !important;
+  color: #048A81 !important;
 }
 
 #navbarNav{

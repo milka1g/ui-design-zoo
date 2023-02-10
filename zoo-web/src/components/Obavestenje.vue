@@ -5,7 +5,9 @@
             <h4>{{ o.naslov }}</h4>
         </div>
         <div class="col-sm-6 desno">
-            <h4>{{ o.status }} &nbsp; <img v-if="o.status=='Odobreno'" class="mini" src="../../public/img/check.png"/> <img v-if="o.status=='Na cekanju'" class="mini" src="../../public/img/wait.png"/></h4>
+            <h4>{{ o.status }} &nbsp; <img v-if="o.status=='Odobreno'" class="mini" src="../../public/img/check.png"/> 
+                <img v-if="o.status=='Na cekanju'" class="mini" src="../../public/img/wait.png"/><img v-if="o.status=='Odbijeno'" class="mini" src="../../public/img/err.png"/></h4>
+                
         </div>
         <div class="col-sm-12 levo">
             <div>Sifra: {{ o.sifra }}</div>

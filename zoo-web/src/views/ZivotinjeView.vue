@@ -4,23 +4,14 @@
         <Meni></Meni>
         <div class="row zivotinje">
             <div class="col-sm-12" v-for="zivotinja in zivotinje" :key="zivotinja.id">
-                <Zivotinja v-if="zivotinja.id < page && zivotinja.id > page-5" :z="zivotinja"></Zivotinja>
+                <Zivotinja :z="zivotinja"></Zivotinja>
             </div>
         </div>
         <nav class="pag" aria-label="Page navigation example">
         <ul class="pagination">
-            <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-                <span style="color:#252525"  aria-hidden="true">&laquo;</span>
-            </a>
-            </li>
-            <li class="page-item"><a @click="pagin(1)" class="page-link" style="color:#252525"  href="#">1</a></li>
-            <li class="page-item"><a @click="pagin(2)" class="page-link" style="color:#252525"  href="#">2</a></li>
-            <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-                <span style="color:#252525" aria-hidden="true">&raquo;</span>
-            </a>
-            </li>
+
+            <li v-for="index in numpages" :key="index" class="page-item"><a @click="pagin(index-1)" class="page-link" style="color:#252525"  href="#">{{index}}</a></li>
+
         </ul>
 </nav>
     </div>
@@ -51,7 +42,6 @@ import Zaglavlje from '../components/Zaglavlje.vue'
 import Meni from '../components/Meni.vue'
 import zivotinje from '../data/zivotinje.js'
 import Zivotinja from '../components/Zivotinja.vue'
-import { IPv4 } from 'ipaddr.js'
 
 export default {
     name:'Zivotinje',
@@ -62,15 +52,29 @@ export default {
     },
     data(){
         return {
-            zivotinje: zivotinje,
-            page:5
+            zivotinje: [],
+            page:5,
+            numpages:0
         }
     },
     methods:{
         pagin(i){
-            this.page = 5 * i;
-            // alert(this.page)
+            // alert('from ' + i*5 + ' to ' + (i+1)*5 + 'and pages: ' + this.numpages);
+            if(localStorage.getItem('zivotinje')!= null){
+            this.zivotinje = JSON.parse(localStorage.getItem('zivotinje'));
+            }
+            else this.zivotinje = zivotinje;
+            this.zivotinje = this.zivotinje.slice(i*5, (i+1)*5);
         }
+    },
+    mounted(){
+        if(localStorage.getItem('zivotinje')!= null){
+            this.zivotinje = JSON.parse(localStorage.getItem('zivotinje'));
+        }
+        else this.zivotinje = zivotinje;
+
+        this.numpages = Math.floor(this.zivotinje.length / 5) + 1;
+        this.zivotinje = this.zivotinje.slice(0, 5);
     }
 }
 </script>

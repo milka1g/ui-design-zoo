@@ -10,7 +10,7 @@
                 <h6>{{ zivotinja.latnaziv }}</h6>
             </div>
             <div class="col-sm-3">
-                <img :src=zivotinja.slikaopis alt="" style="height:500px; border-radius: 10px;">
+                <img :src=zivotinja.slikaopis alt="" style="height:250px; border-radius: 10px;">
             </div>
             <div class="col-sm-3">
                 <div class="card">
@@ -109,6 +109,7 @@ export default {
         return {
             myid:0,
             zivotinja:{},
+            zivotinje:[],
             komentari:[
                 {   
                     id: 0,
@@ -126,7 +127,13 @@ export default {
     },
     mounted(){
         this.myid = Number(this.$route.params.id);
-        this.zivotinja = zivotinje.find(z => z.id == this.myid);
+        if(localStorage.getItem('zivotinje')!= null){
+            this.zivotinje = JSON.parse(localStorage.getItem('zivotinje'));
+        }
+        else this.zivotinje = zivotinje;
+        this.zivotinja = this.zivotinje.find(z => z.id == this.myid);
+
+        // alert(this.zivotinja.naziv);
     },
     methods:{
         komentarisi(){
